@@ -305,6 +305,20 @@ vendor/lib/soundfx/libvolumelistener.so:product/vendor_overlay/29/lib/soundfx/li
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
 
+# Camera (popup sound effects)
+media/audio/ui/popup_cangmen_down.ogg
+media/audio/ui/popup_cangmen_up.ogg
+media/audio/ui/popup_chilun_down.ogg
+media/audio/ui/popup_chilun_up.ogg
+media/audio/ui/popup_jijia_down.ogg
+media/audio/ui/popup_jijia_up.ogg
+media/audio/ui/popup_mofa_down.ogg
+media/audio/ui/popup_mofa_up.ogg
+media/audio/ui/popup_muqin_down.ogg
+media/audio/ui/popup_muqin_up.ogg
+media/audio/ui/popup_yingyan_down.ogg
+media/audio/ui/popup_yingyan_up.ogg
+
 # Modules
 vendor/lib/modules/audio_adsp_loader.ko:product/vendor_overlay/29/lib/modules/audio_adsp_loader.ko
 vendor/lib/modules/audio_apr.ko:product/vendor_overlay/29/lib/modules/audio_apr.ko
@@ -350,5 +364,3 @@ vendor/lib/modules/rmnet_perf.ko:product/vendor_overlay/29/lib/modules/rmnet_per
 vendor/lib/modules/rmnet_shs.ko:product/vendor_overlay/29/lib/modules/rmnet_shs.ko
 vendor/lib/modules/sla.ko:product/vendor_overlay/29/lib/modules/sla.ko
 vendor/lib/modules/tspp.ko:product/vendor_overlay/29/lib/modules/tspp.ko
-
-
