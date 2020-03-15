@@ -5,8 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_phoenix.mk
+    $(LOCAL_DIR)/aosip_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_phoenix-userdebug \
-    lineage_phoenix-eng
+    aosip_lmi-user \
+    aosip_lmi-userdebug \
+    aosip_lmi-eng

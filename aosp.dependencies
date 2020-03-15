@@ -1,0 +1,15 @@
+
+[
+  {
+    "repository": "Official-Ayrton990/vendor_xiaomi_lmi-R"
+    "target_path": "vendor/xiaomi/lmi"
+    "branch"     : "eleven-oss",
+    "remote"     : "github"
+  },
+  {
+    "repository" : "Official-Ayrton990/kernel_xiaomi_sm8250",
+    "target_path": "kernel/xiaomi/lmi",
+    "branch"     : "picasso-r-oss",
+    "remote"     : "github"
+  },
+]
