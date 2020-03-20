@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
