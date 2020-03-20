@@ -172,6 +172,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # HIDL
 PRODUCT_PACKAGES += \
     libhwbinder.vendor
