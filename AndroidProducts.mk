@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosip_lmi.mk
+    $(LOCAL_DIR)/aosp_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosip_lmi-user \
-    aosip_lmi-userdebug \
-    aosip_lmi-eng
+    aosp_lmi-user \
+    aosp_lmi-userdebug \
+    aosp_lmi-eng
