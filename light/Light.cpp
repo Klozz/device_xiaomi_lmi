@@ -16,10 +16,16 @@
 
 #define LOG_TAG "light"
 
+/* im unsure about these paths ¯\_(ツ)_/¯ 
+   I'll add them for future usage (or not) */
+#define DISPPARAM_PATH "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param"
+#define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness"
+#define DIM_ALPHA_PATH "sys/class/drm/card0-DSI-1/dim_alpha"
 #define MAXIMUM_DISPLAY_BRIGHTNESS 2047
 
 #include <log/log.h>
-
+#include <cmath>
+#include <fstream>
 #include <stdio.h>
 
 #include "Light.h"
@@ -29,6 +35,12 @@ namespace hardware {
 namespace light {
 namespace V2_0 {
 namespace implementation {
+
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
 
 static_assert(LIGHT_FLASH_NONE == static_cast<int>(Flash::NONE),
     "Flash::NONE must match legacy value.");
@@ -69,6 +81,10 @@ Return<Status> Light::setLight(Type type, const LightState& state)  {
     // Scale display brightness.
     if (type == Type::BACKLIGHT) {
         legacyState.color = (state.color & 0xFF) * MAXIMUM_DISPLAY_BRIGHTNESS / 0xFF;
+		/* this should need calibration but i dont have the device so idk */
+        float alpha = 1.0 - pow(legacyState.color / 2047.0 * 430.0 / 600.0, 0.455);
+        int dim_alpha = alpha * 255;
+        set(DIM_ALPHA_PATH, dim_alpha);
     }
 
     int ret = hwLight->set_light(hwLight, &legacyState);

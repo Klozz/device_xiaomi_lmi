@@ -18,3 +18,5 @@ on property:init.svc.tcpdump=running
 on property:init.svc.vendor.ipacm-diag=running
     stop vendor.ipacm-diag
 
+on post-fs-data
+    write /sys/class/drm/card0-DSI-1/dim_layer_enable 1
