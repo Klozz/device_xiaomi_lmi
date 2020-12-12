@@ -50,7 +50,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    OpenCamera
+
+RODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/net.sourceforge.opencamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/net.sourceforge.opencamera.xml
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
@@ -141,9 +144,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # overlay-remove
 PRODUCT_PACKAGES += \
-    FrameworksResCommon \
-    FrameworksResTarget \
     DevicesOverlay \
+    FrameworksResTarget \
     DevicesAndroidOverlay
 
 # Permissions
@@ -153,7 +155,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.lmi
+    android.hardware.power-service.lmi
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -161,7 +163,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    vendor/nxp/opensource/sn100x \
+    vendor/nxp/opensource/sn100x
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -183,3 +185,6 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 BOARD_BUILD_PRODUCT_IMAGE := true
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0

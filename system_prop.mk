@@ -25,6 +25,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.displayfeature.histogram.enable=true \
     sys.displayfeature.hbm.enable=true
 
+# Enable blurs
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1 \
+    ro.sf.blurs_are_expensive=1
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
@@ -68,6 +73,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Subsystem ramdump
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# Use Vulkan backend for Skia UI rendering
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.hwui.renderer=skiavk
 
 # Vendor
 PRODUCT_PROPERTY_OVERRIDES += \
