@@ -191,6 +191,9 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # Telephony
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 
+# Treble
+BOARD_VNDK_VERSION := current
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 ifeq ($(BOARD_AVB_ENABLE), true)
