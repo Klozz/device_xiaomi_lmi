@@ -34,6 +34,11 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService
+
+# Atrace
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
