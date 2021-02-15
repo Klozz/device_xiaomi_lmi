@@ -170,7 +170,11 @@ PRODUCT_PACKAGES += \
     com.gsma.services.nfc \
     NfcNci \
     SecureElement \
-    Tag
+    Tag \
+    vendor.nxp.hardware.nfc@1.1 \
+    vendor.nxp.hardware.nfc@2.0 \
+    vendor.nxp.hardware.nfc@1.1.vendor \
+    vendor.nxp.hardware.nfc@2.0.vendor
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
