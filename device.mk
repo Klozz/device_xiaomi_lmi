@@ -157,6 +157,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.kona
 
+
+# Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
+    libavservices_minijail_vendor
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
