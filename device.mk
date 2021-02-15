@@ -146,6 +146,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhwbinder.vendor
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
