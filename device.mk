@@ -153,6 +153,10 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
+# Lights
+PRODUCT_PACKAGES += \
+    lights.kona
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
