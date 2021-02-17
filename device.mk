@@ -158,6 +158,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.lmi
 
+PRODUCT_PACKAGES += \
+    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
+
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
+
 # fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
