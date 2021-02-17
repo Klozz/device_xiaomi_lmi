@@ -369,7 +369,7 @@ PRODUCT_PACKAGES += \
     setup_headsetmic2receiver.sh \
     setup_mainmic2headphone.sh \
     setup_topmic2headphone.sh \
-    teardown_loopback.sh \
+    teardown_loopback.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.factory.rc \
@@ -378,7 +378,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.target.wigig.rc \
     fstab.qcom \
-    ueventd.qcom.rc \
+    ueventd.qcom.rc
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
