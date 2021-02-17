@@ -31,10 +31,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService
-
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
