@@ -258,8 +258,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworksResTarget \
     LmiFrameworks \
-    LmiSystemUI \
-    WifiResTarget
+    LmiSystemUI
 
 # Net
 PRODUCT_PACKAGES += \
