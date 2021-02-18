@@ -258,7 +258,8 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     FrameworksResTarget \
     LmiFrameworks \
-    LmiSystemUI
+    LmiSystemUI \
+    TelephonyResCommon
 
 # Net
 PRODUCT_PACKAGES += \
