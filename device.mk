@@ -246,15 +246,11 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    com.gsma.services.nfc \
     NfcNci \
-    SecureElement \
-    Tag \
-    vendor.nxp.hardware.nfc@1.1 \
-    vendor.nxp.hardware.nfc@2.0 \
-    vendor.nxp.hardware.nfc@1.1.vendor \
-    vendor.nxp.hardware.nfc@2.0.vendor
+    Tag
+
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
