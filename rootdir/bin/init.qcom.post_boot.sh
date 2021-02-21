@@ -5760,3 +5760,20 @@ esac
 misc_link=$(ls -l /dev/block/bootdevice/by-name/misc)
 real_path=${misc_link##*>}
 setprop persist.vendor.mmi.misc_dev_path $real_path
+
+function fix_wifi() {
+ ln -sf /vendor/etc/wifi/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+
+ #for qca6390
+ ln -sf /vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/qca6390/WCNSS_qcom_cfg.ini
+ ln -sf /mnt/vendor/persist/qca6390/wlan_mac.bin /vendor/firmware/wlan/qca_cld/qca6390/wlan_mac.bin
+
+ #for qca6490
+ ln -sf /vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini /vendor/firmware/wlan/qca_cld/qca6490/WCNSS_qcom_cfg.ini
+ ln -sf /mnt/vendor/persist/qca6490/wlan_mac.bin /vendor/firmware/wlan/qca_cld/qca6490/wlan_mac.bin
+ 
+ setprop persist.wifi_fix.parsed true
+}
+
+#we try to force the linkage of wifi files
+fix_wifi
